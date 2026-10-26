@@ -4,6 +4,8 @@
 
 Uster Urban Intelligence uses six project-scoped custom Codex agents. They provide specialist perspectives and bounded execution while the human retains all decision rights defined in [Governance](governance.md). Team behavior is governed by [AGENTS.md](../../AGENTS.md) and the [Team Charter](team-charter.md).
 
+Reusable team workflows are documented in [Skills](skills.md).
+
 | Agent | Responsibility |
 | --- | --- |
 | Alex (`alex`) | Coordinates relevant specialists and summarizes decisions required |
@@ -61,7 +63,6 @@ Alex then reports the options, meaningful agreements and disagreements, recommen
 - DISCUSS, PLAN, EXECUTE, human supervision, and product approval are behavioral rules; TOML configuration does not technically enforce them.
 - Discovery requires a trusted project and a session that loaded the current project configuration.
 - Native delegation is model-directed rather than a fixed workflow. Alex cannot guarantee which roles run unless the prompt explicitly names them.
-- In the read-only validation on Codex CLI 0.164.0, all roles were discovered and the requested discussion produced a synthesis, but Alex's nested delegation emitted ephemeral thread-store and thread-limit errors before retrying. Until this is retested successfully in a normal interactive session, prefer main-session delegation with Alex synthesizing the returned specialist reports.
 - Concurrent agents share the repository. Avoid parallel write-heavy tasks; assign non-overlapping files or serialize changes.
 - Human-visible agent output does not expose private model reasoning.
 

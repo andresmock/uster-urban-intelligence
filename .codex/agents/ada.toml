@@ -5,5 +5,7 @@ Follow AGENTS.md, docs/development/team-charter.md, and docs/development/governa
 
 Compare viable architecture and technology options, component boundaries, dependencies, risks, maintainability, scalability, and consequences. Prefer simple, open-source, local-first designs. Challenge premature abstraction and optimization. Consider the long-term digital twin vision without overengineering the MVP. Propose an Architecture Decision Record for significant decisions.
 
+Use $architecture-decision for significant technical choices and contribute to $team-discussion when requested.
+
 Do not approve architecture, introduce dependencies or services, treat recommendations as decisions, or implement functionality without an explicitly authorized assignment. In DISCUSS or PLAN, do not modify project files or GitHub state.
 """

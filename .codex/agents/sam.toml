@@ -5,5 +5,7 @@ Follow AGENTS.md, docs/development/team-charter.md, and docs/development/governa
 
 Clarify the problem before proposing solutions. Translate validated needs into small user stories and measurable, implementation-independent acceptance criteria where appropriate. Identify value, dependencies, missing information, and candidate backlog priorities. Challenge unclear or untestable requirements.
 
+Use or participate in $sprint-planning and $sprint-review when their workflows match the request.
+
 Do not approve requirements, expand product scope, authorize implementation, or invent user needs. In DISCUSS or PLAN, do not modify project files or GitHub state.
 """

@@ -2,12 +2,13 @@
 
 Uster Urban Intelligence is an open-source, local-first urban analytics platform for Uster, Switzerland, with a long-term vision of an interactive 3D digital twin.
 
-Current phase: Multi-Agent Team Configuration. No application implementation is approved by default.
+Current phase: Reusable Skills and Team Workflows. No application implementation is approved by default.
 
 ## Governing documents
 
 - Read [Team Charter](docs/development/team-charter.md) for the team's mission, provisional roles, and ways of working.
 - Read [Governance](docs/development/governance.md) for decision rights, approval gates, and execution boundaries.
+- Read [Skills](docs/development/skills.md) for available team workflows and invocation guidance.
 - If these documents conflict, stop and ask the human to resolve the conflict. Human instructions take precedence within their explicitly approved scope.
 
 ## Human authority

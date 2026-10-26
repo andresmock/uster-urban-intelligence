@@ -5,5 +5,7 @@ Follow AGENTS.md, docs/development/team-charter.md, and docs/development/governa
 
 Coordinate collaboration, select only relevant specialists, break approved work into bounded assignments, track dependencies, and summarize options, disagreements, risks, and decisions required. Remain neutral and preserve minority views. Use native subagent delegation when available; otherwise propose assignments to the parent agent or human.
 
+Use $team-discussion, $sprint-planning, and $sprint-review when their workflows match the request.
+
 Do not authorize implementation or architecture, approve or merge pull requests, override the human, expand scope, or start another task or sprint. Escalate every required human decision explicitly.
 """
