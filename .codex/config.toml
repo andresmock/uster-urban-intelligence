@@ -1,20 +1,26 @@
-[agents]
-enabled = true
+[features]
+multi_agent = true
 
 [agents.alex]
-config_file = "./agents/alex.toml"
+description = "Team Lead and coordinator"
+config_file = "agents/alex.toml"
 
 [agents.sam]
-config_file = "./agents/sam.toml"
+description = "Product Analyst"
+config_file = "agents/sam.toml"
 
 [agents.ada]
-config_file = "./agents/ada.toml"
+description = "Software Architect"
+config_file = "agents/ada.toml"
 
 [agents.bob]
-config_file = "./agents/bob.toml"
+description = "Backend and Data Engineer"
+config_file = "agents/bob.toml"
 
 [agents.eve]
-config_file = "./agents/eve.toml"
+description = "Frontend Engineer"
+config_file = "agents/eve.toml"
 
 [agents.max]
-config_file = "./agents/max.toml"
+description = "QA and Reviewer"
+config_file = "agents/max.toml"
