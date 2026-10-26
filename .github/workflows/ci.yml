@@ -1,0 +1,61 @@
+name: CI
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  repository-validation:
+    name: Repository validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: "3.13"
+
+      - name: Validate repository configuration
+        shell: bash
+        run: |
+          python - <<'PY'
+          import py_compile
+          import subprocess
+          import tomllib
+          from pathlib import Path
+
+          tracked = subprocess.run(
+              ["git", "ls-files", "-z"],
+              check=True,
+              capture_output=True,
+          ).stdout.decode().split("\0")
+
+          toml_files = [Path(path) for path in tracked if path.endswith(".toml")]
+          for path in toml_files:
+              with path.open("rb") as stream:
+                  tomllib.load(stream)
+          print(f"Validated {len(toml_files)} TOML file(s).")
+
+          python_files = [
+              Path(path)
+              for path in tracked
+              if path.endswith(".py")
+              and (path.startswith("apps/") or path.startswith("tests/"))
+          ]
+          for path in python_files:
+              py_compile.compile(path, doraise=True)
+          print(f"Compiled {len(python_files)} Python file(s).")
+          PY
