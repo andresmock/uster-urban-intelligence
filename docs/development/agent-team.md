@@ -15,7 +15,7 @@ Uster Urban Intelligence uses six project-scoped custom Codex agents. They provi
 
 ## Configuration
 
-Project multi-agent support is enabled in `.codex/config.toml`. Each agent is defined by a standalone file in `.codex/agents/<identifier>.toml` using the native `name`, `description`, and `developer_instructions` fields. No role pins a model or reasoning level; each inherits the parent session's supported settings.
+Project multi-agent support is enabled in `.codex/config.toml`, where all six identifiers are explicitly registered under `[agents.<identifier>]`. Each registration references `.codex/agents/<identifier>.toml`, which defines the native `name`, `description`, and `developer_instructions` fields. No role pins a model or reasoning level; each inherits the parent session's supported settings.
 
 Codex loads project-scoped configuration only for a trusted project. Start a new Codex session after configuration changes so discovery uses the current files.
 

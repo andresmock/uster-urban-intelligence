@@ -1,2 +1,20 @@
 [agents]
 enabled = true
+
+[agents.alex]
+config_file = "./agents/alex.toml"
+
+[agents.sam]
+config_file = "./agents/sam.toml"
+
+[agents.ada]
+config_file = "./agents/ada.toml"
+
+[agents.bob]
+config_file = "./agents/bob.toml"
+
+[agents.eve]
+config_file = "./agents/eve.toml"
+
+[agents.max]
+config_file = "./agents/max.toml"
