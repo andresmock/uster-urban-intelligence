@@ -26,6 +26,16 @@ Prefer squash merges and do not create a long-lived development branch.
 
 No agent represents Max's QA as a native GitHub review approval. Because the repository has one human owner, the branch policy does not require a separate GitHub reviewer identity; the independent QA record remains in the PR.
 
+### Pull Request transparency
+
+The PR body is the concise, current decision summary. It identifies only the agents who materially participated, their roles, contributions, and supporting evidence. It also records every actionable finding or material concern with its source, impact, owner, status, and resolution or revalidation evidence. If QA finds nothing actionable, the record still states the reviewed scope, checks and results, unverified assumptions, and recommendation.
+
+Use stable concern statuses: `Open`, `Fixed—awaiting revalidation`, `Resolved`, `Accepted risk`, or `Deferred`. Only the human may accept a risk. `Deferred` is limited to non-blocking work outside the approved scope and links to a GitHub Issue. Deferring approved scope or a blocking concern requires an explicit human scope or risk decision, and the PR is not ready until that decision is recorded. Unmet acceptance criteria cannot be deferred while the PR remains ready for human review.
+
+Use timestamped PR comments for material QA reports, corrections and revalidation, scope or architecture escalations, and unresolved disagreement when preserving chronology helps the decision. Attribute Codex reports by agent name while making clear they were posted through the shared GitHub identity. Do not log routine commands or duplicate the full working conversation.
+
+Monitoring and interruption details are optional. Record exceptional stalls, retries, or elapsed phases only when timestamps or tools provide observable evidence. Label durations as elapsed wall-clock time, never active work or productivity. Do not estimate missing durations or publish private reasoning, raw prompts, token usage, credentials, secrets, or private data. Alex verifies the final summary before marking the PR ready.
+
 ## Definition of Done
 
 Implementation is done when:
